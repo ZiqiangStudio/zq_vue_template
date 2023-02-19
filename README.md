@@ -25,6 +25,7 @@
 - `preview` 预览 `dist` 内打包后资源
 - `lint` 检查代码是否符合规范
 - `lint --fix` 检查代码是否符合规范，并自动修复
+- `typecheck` 检查 TypeScript 代码是否类型安全
 
 
 *对本模板有任何问题或者建议可以通过 issue、email、钉钉、QQ 联系我*
