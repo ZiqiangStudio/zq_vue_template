@@ -12,8 +12,8 @@
 1. 使用 [tiged](https://github.com/tiged/tiged) 拉取代码，比如 `tiged ZiqiangStudio/zq_vue_template#ts my-vue-project`
 2. 将 [package.json](./package.json) 中的 `name` 改成响亮的项目名
 3. 将 [.gitignore](./.gitignore) 中的 lock 文件部分去掉，保证项目的 lock 文件可以成功上传至仓库
-4. 执行 `npm install` 或 `pnpm install` 安装依赖
-5. 执行 `npm run dev` 或 `pnpm dev` 在本地运行项目
+4. 执行 `pnpm install` 安装依赖
+5. 执行 `pnpm dev` 在本地运行项目
 
 如果能成功看到浏览器中的 Vite + Vue 字样，则代表项目成功搭建🎉
 
