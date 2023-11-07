@@ -30,8 +30,8 @@ module.exports = {
   insertPragma: false,
   // 使用默认的折行标准
   proseWrap: 'preserve',
-  // 根据显示样式决定 html 要不要折行
-  htmlWhitespaceSensitivity: 'css',
+  // 解决 Vue 代码中 html 缩进问题
+  htmlWhitespaceSensitivity: 'ignore',
   // vue 文件中的 script 和 style 内不用缩进
   vueIndentScriptAndStyle: false,
   // 换行符使用 lf
