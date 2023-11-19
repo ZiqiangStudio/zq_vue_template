@@ -9,7 +9,7 @@
 
 ## 各分支对应模板
 
-- `master` - 普通 Vue3 项目
+- `main` - 普通 Vue3 项目
 - `ts` - TypeScript Vue3 项目
 
 ## 如何使用本模板
