@@ -19,39 +19,39 @@ jobs:
   lint:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      - name: Use Node.js 18
-        uses: actions/setup-node@v3
+      - name: Use Node.js 22
+        uses: actions/setup-node@v4
         with:
-          node-version: 18.x
+          node-version: 22.x
       - name: Install pnpm
-        uses: pnpm/action-setup@v2.2.4
+        uses: pnpm/action-setup@v4
         with:
-          version: 7.25.0
+          version: 9
           run_install: true
       - name: Commit lint
-        uses: ahmadnassri/action-commit-lint@v1
+        uses: ahmadnassri/action-commit-lint@v2
         with:
-          config: ./commitlint.config.cjs
+          config: ./commitlint.config.ts
       - name: Code lint
         if: always()
         run: pnpm lint
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      - name: Use Node.js 18
-        uses: actions/setup-node@v3
+      - name: Use Node.js 22
+        uses: actions/setup-node@v4
         with:
-          node-version: 18.x
+          node-version: 22.x
       - name: Install pnpm
-        uses: pnpm/action-setup@v2.2.2
+        uses: pnpm/action-setup@v4
         with:
-          version: 7.25.0
+          version: 9
           run_install: true
       - name: Build
         run: pnpm build

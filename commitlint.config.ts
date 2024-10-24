@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   // commitlint 规则 https://commitlint.js.org/#/reference-rules
   rules: {
     'body-leading-blank': [1, 'always'],

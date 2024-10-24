@@ -72,6 +72,11 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+# Lock files
+package-lock.json
+pnpm-lock.yaml
+yarn.lock
+
 # Logs
 logs
 *.log
