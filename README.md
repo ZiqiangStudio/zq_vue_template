@@ -61,4 +61,4 @@ pnpm preview
 项目内置 `.github/workflows/cicd.yml`，推送至 `main` 分支时将自动调用组织中央部署流水线 (`zq-deploy`) 完成 Docker 构建与发布。
 - **容器环境**：多阶段构建，采用 Nginx Alpine 镜像托管 SPA 静态资源，支持 HTML5 History 路由与 Gzip 压缩。
 - **端口契约**：容器内部标准监听 `80` 端口。
-- **域名绑定**：由项目负责人在 GitHub 仓库变量 (`Settings -> Secrets and variables -> Actions -> Variables -> DOMAIN`) 中直接配置，代码零硬编码。
+- **域名绑定**：由项目负责人在 `.github/workflows/cicd.yml` 中的 `domain:` 字段直接填入，直观透明。
