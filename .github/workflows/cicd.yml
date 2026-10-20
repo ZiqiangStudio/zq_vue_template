@@ -1,0 +1,50 @@
+name: CI/CD
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+  packages: write
+  deployments: write
+  id-token: write
+
+concurrency:
+  group: ${{ github.repository }}-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  test:
+    name: Lint and Build
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24.x
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          run_install: true
+
+      - name: Run code linter
+        run: pnpm lint
+
+      - name: Run build check
+        run: pnpm build
+
+  deploy:
+    name: Deploy to Production
+    needs: test
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    uses: ZiqiangStudio/zq-deploy/.github/workflows/reusable-container.yml@main
+    secrets: inherit
+    with:
+      domain: "" # 上线时填入分配给本服务的公网域名，多个用逗号隔开，例如 score.ziqiang.net.cn
+      port: "80"
