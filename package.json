@@ -18,7 +18,7 @@
   "devDependencies": {
     "@commitlint/cli": "^19.5.0",
     "@commitlint/cz-commitlint": "^19.5.0",
-    "@vitejs/plugin-vue": "^5.1.4",
+    "@vitejs/plugin-vue": "^6.0.10",
     "@zqstudio/configs": "^0.1.0",
     "commitizen": "^4.3.1",
     "eslint": "^9.13.0",
