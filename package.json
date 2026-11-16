@@ -22,7 +22,7 @@
     "@zqstudio/configs": "^0.1.0",
     "commitizen": "^4.3.1",
     "eslint": "^9.13.0",
-    "prettier": "^3.3.3",
+    "prettier": "^3.10.1",
     "vite": "^5.4.10"
   },
   "config": {
